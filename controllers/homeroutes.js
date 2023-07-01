@@ -1,5 +1,6 @@
 // Routing and rendering page
 const router = require("express").Router()
+const {Event} = require("../models")
 
 
 router.get("/", async (req,res) => {
@@ -10,7 +11,6 @@ router.get("/", async (req,res) => {
 
 
 router.get("/login", (req,res) => {
-    console.log("INSIDE ROUTE!")
     res.render("login.handlebars");
    // res.send("The goose is watching")
 })
@@ -20,9 +20,11 @@ router.get("/login", (req,res) => {
 
 router.get("/singleAttraction/:id", async (req, res) => {
     try {
-        const attractionData = await Event.findByPk(req.params.id)
+        const attractionData = await Event.findOne({where:{id:req.params.id}})
+        console.log(req.params.id)
         const attraction = attractionData.get({plain:true})
-        console.log(attraction)
+       
+
         res.render("singleAttraction", {
             ...attraction
         })
