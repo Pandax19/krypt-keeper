@@ -3,13 +3,15 @@ const router = require("express").Router()
 
 
 router.get("/", async (req,res) => {
+    console.log("home route")
     res.render("home");
-   // res.send("The goose is watching")
+//    res.send("The goose is watching")
 })
 
 
-router.get("/login", async (req,res) => {
-    res.render("login");
+router.get("/login", (req,res) => {
+    console.log("INSIDE ROUTE!")
+    res.render("login.handlebars");
    // res.send("The goose is watching")
 })
 
@@ -18,14 +20,22 @@ router.get("/login", async (req,res) => {
 
 router.get("/singleAttraction/:id", async (req, res) => {
     try {
+        const attractionData = await Event.findByPk(req.params.id)
+        const attraction = attractionData.get({plain:true})
+        console.log(attraction)
         res.render("singleAttraction", {
-            title: "SpookyZone", 
-            description: "It's Spooky!",
-            price: "$3,00000",
-            address: "nowhere",
-            date: "June 30"
+            ...attraction
         })
+
+        // res.render("singleAttraction", {
+        //     title: "SpookyZone", 
+        //     description: "It's Spooky!",
+        //     price: "$3,00000",
+        //     address: "nowhere",
+        //     date: "June 30"
+        //})
     } catch (error) {
+        console.log("HELP")
         res.status(500).json(error)
     }
 })
