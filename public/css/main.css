@@ -19,7 +19,7 @@
     
     font-size: x-large;
     background: none;
-    color: white;
+    color: blue;
     font-weight: 700;
     mix-blend-mode: overlay;
     padding: 5px 5px;
@@ -31,7 +31,7 @@
     
     font-size: xx-large;
     background: none;
-    color: white;
+    color: blue;
     font-weight: 700;
     mix-blend-mode: overlay;
     padding: 5px 5px;
@@ -43,7 +43,7 @@
     align-items: center;
     font-size: xx-large;
     background: none;
-    color: white;
+    color: blue;
     font-weight: 700;
     mix-blend-mode: overlay;
     
@@ -54,7 +54,7 @@
     min-height: 15vh;
     font-size: xx-large;
     background: none;
-    color: white;
+    color: blue;
     font-weight: 700;
     mix-blend-mode: overlay;
     padding: 1px 1px;

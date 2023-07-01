@@ -1,11 +1,11 @@
 // Routing and rendering page
 const router = require("express").Router()
-const {Event} = require("../models")
+const {Event, User} = require("../models")
 
 
 router.get("/", async (req,res) => {
     console.log("home route")
-    res.render("home");
+    res.render("home.handlebars", {logged_in: true});
 //    res.send("The goose is watching")
 })
 
