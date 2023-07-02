@@ -8,16 +8,26 @@
     z-index: -1;
 }
 
+#attractions {
+    display: flex;
+    justify-content: center;
+    
+}
 
 .user_section {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
+.login {
+    display: flex;
+    justify-content: space-around;
+
+}
 
 .test {
     
-    font-size: x-large;
+    font-size: xx-large;
     background: none;
     color: blue;
     font-weight: 700;
