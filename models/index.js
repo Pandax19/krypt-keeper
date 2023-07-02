@@ -9,4 +9,4 @@ User.hasMany(Event, {
     foreignKey: "user_id"
 })
 
-module.export = {Event, User}
+module.exports = {Event, User}
