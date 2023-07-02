@@ -7,7 +7,7 @@ const userRoutes = require ("./api/userRoutes.js")
 const contactpage = require("./api/contactpage.js")
 const eventRoutes = require("./api/eventRoutes.js")
 
-// Created paths 
+// Created paths for the application's routes.  
 
 router.use("/" , homeroutes);
 

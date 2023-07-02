@@ -4,13 +4,13 @@ const router = require("express").Router()
 
 router.get("/", async (req,res) => {
     res.render("home");
-   // res.send("The goose is watching")
+   
 })
 
 
 router.get("/login", async (req,res) => {
     res.render("login");
-   // res.send("The goose is watching")
+  
 })
 
 
@@ -48,7 +48,7 @@ router.get("/signUp", (req, res) => {
     res.render("signUp")
 })
 
-// path to models folder   
+// Path to models folder   
 
 
 module.exports = router;

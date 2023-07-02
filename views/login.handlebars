@@ -32,3 +32,28 @@
 
 <script src="./js/login.js"/>
 <script src="./js/signup.js"/>
+
+
+
+
+  {{#unless logged_in}}
+
+        <div class="login">
+            <a href="/login" class="test">Log In</a>
+            <a href="/signup" class="test">Sign Up</a>
+
+        </div>
+        <br><br>
+
+        {{/unless}}
+        {{#if logged_in}}
+
+
+        <button id="logout" class="test"> Log Out</button>
+
+
+        {{/if}}
+
+        <section id="attractions">
+            <a href="/attractions" class="title">Activities and Attractions</a>
+        </section>
