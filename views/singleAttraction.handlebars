@@ -9,8 +9,9 @@
     <h3>{{date}}</h3>
 
     <p id="event-desc">{{description}}</p>
-
+    {{#if logged_in}}
     <button id="faveBtn" data-title="{{title}}" data-desc="{{description}}" data-price="{{price}}" data-date="{{date}}" data-address="{{address}}">Add To Favorites</button>
+    {{/if}}
 </div>
 
 <div id="map-area">

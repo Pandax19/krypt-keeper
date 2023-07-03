@@ -30,7 +30,12 @@
 
         <br><br>
 
-        {{#unless logged_in}}
+        {{#if logged_in}}
+
+
+        <button id="logout" class="test"> Log Out</button>
+        <script src="./js/logout.js"></script>
+        {{else}}
 
         <div class="login">
             <a href="/login" class="test">Log In</a>
@@ -38,14 +43,6 @@
 
         </div>
         <br><br>
-
-        {{/unless}}
-        {{#if logged_in}}
-
-
-        <button id="logout" class="test"> Log Out</button>
-
-
         {{/if}}
 
         <section id="attractions">
