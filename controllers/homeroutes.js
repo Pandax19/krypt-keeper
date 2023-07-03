@@ -15,7 +15,18 @@ router.get("/login", (req,res) => {
    // res.send("The goose is watching")
 })
 
-
+router.get("/attractions", async (req, res) => {
+    try {
+        const attractionData = await Event.findAll()
+        const events = attractionData.map((attraction) => attraction.get({plain:true}))
+        res.render("attractions", {
+            events,
+            logged_in: req.session.logged_in
+        })
+    } catch (error) {
+        res.status(500).json(error)
+    }
+})
 // Specific attraction example 
 
 router.get("/singleAttraction/:id", async (req, res) => {
@@ -26,7 +37,8 @@ router.get("/singleAttraction/:id", async (req, res) => {
        
 
         res.render("singleAttraction", {
-            ...attraction
+            ...attraction,
+            logged_in: req.session.logged_in
         })
 
         // res.render("singleAttraction", {
