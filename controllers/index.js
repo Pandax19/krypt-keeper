@@ -11,11 +11,11 @@ const eventRoutes = require("./api/eventRoutes.js")
 
 router.use("/" , homeroutes);
 
-router.use("/userRoutes", userRoutes);
+router.use("/api/users", userRoutes);
 
-router.use("/contactpage", contactpage);
+router.use("/api/contact", contactpage);
 
-router.use("/eventRoutes", eventRoutes);
+router.use("/api/events", eventRoutes);
 
 module.exports = router;
  

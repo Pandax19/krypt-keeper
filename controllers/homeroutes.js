@@ -5,7 +5,7 @@ const {Event, User} = require("../models")
 
 router.get("/", async (req,res) => {
     console.log("home route")
-    res.render("home.handlebars", {logged_in: true});
+    res.render("home", {logged_in: req.session.logged_in});
 //    res.send("The goose is watching")
 })
 
