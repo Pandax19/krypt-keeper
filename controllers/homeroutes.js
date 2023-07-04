@@ -4,11 +4,14 @@ const {Event, User} = require("../models")
 
 
 router.get("/", async (req,res) => {
-    res.render("home");
+    console.log('Testing page');
+    res.render("main")
+   
    
 })
 
 router.get("/login", async (req,res) => {
+    console.log('Testing page 2');
     res.render("login");
   
 })

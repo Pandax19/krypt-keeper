@@ -30,7 +30,8 @@ const PORT = process.env.PORT || 8888;
 
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
-app.set('views', './views/layouts')
+
+app.set('views', './views');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended:true}));
