@@ -5,16 +5,32 @@ const {Event, User} = require("../models")
 
 router.get("/", async (req,res) => {
     console.log('Testing page');
-    res.render("main")
-   
+    res.render("home")
    
 })
 
-router.get("/login", async (req,res) => {
-    console.log('Testing page 2');
-    res.render("login");
-  
+
+//login/signup routes
+
+router.get("/login", (req, res) => {
+    if (req.session.logged_in) {
+        res.redirect("/home")
+        return
+    }
+    res.render("login")    
 })
+
+router.get("/signUp", (req, res) => {
+    if (req.session.logged_in) {
+        res.redirect("/home")
+        return
+    }
+    res.render("signUp")
+})
+
+
+
+
 
 router.get("/attractions", async (req, res) => {
     try {
