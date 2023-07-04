@@ -2,7 +2,7 @@
 
 <div id="login-container">
     <h2>Log in</h2>
-<form class="login-form">
+<form id="login-form">
 
     <input class="form-input" type="text" placeholder="username" id="username-login" />
 
@@ -10,14 +10,14 @@
 
     <button type="submit">Login</button>
 
-    <a href="/signUp">Sign Up</a>
+    {{!-- <a href="/signUp">Sign Up</a> --}}
 
 </form>
 </div>
 
 <div class="signup-form">
     <h2>Sign Up</h2>
-    <form class="signup-form">
+    <form id="signup-form">
         <div>
             <input type="text" placeholder="username" id="username-signup"/>
             <div>
@@ -30,30 +30,5 @@
     </form>
 </div>
 
-<script src="./js/login.js"/>
-<script src="./js/signup.js"/>
-
-
-
-
-  {{#unless logged_in}}
-
-        <div class="login">
-            <a href="/login" class="test">Log In</a>
-            <a href="/signup" class="test">Sign Up</a>
-
-        </div>
-        <br><br>
-
-        {{/unless}}
-        {{#if logged_in}}
-
-
-        <button id="logout" class="test"> Log Out</button>
-
-
-        {{/if}}
-
-        <section id="attractions">
-            <a href="/attractions" class="title">Activities and Attractions</a>
-        </section>
+<script src="/js/login.js"></script>
+<script src="/js/signup.js"></script>

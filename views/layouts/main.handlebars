@@ -22,15 +22,37 @@
 
 <body>
 
-    <video autoplay muted loop id="myVideo">
-        <source src="./Assests/graveyard.mp4" type="video/mp4">
-    </video>
-
-    <header class="title">
-
 
         <a id="header" href="/" class="title">Krypt Keepers</a>
         <br><br>
+
+
+        <a href="/" class="title"> Home </a>
+
+        <br><br>
+
+
+
+        <br><br>
+
+        {{#if logged_in}}
+
+
+        <button id="logout" class="test"> Log Out</button>
+        <script src="./js/logout.js"></script>
+        {{else}}
+
+        <div class="login">
+            <a href="/login" class="test">Log In</a>
+            <a href="/signup" class="test">Sign Up</a>
+
+        </div>
+        <br><br>
+        {{/if}}
+
+        <section id="attractions">
+            <a href="/attractions" class="title">Activities and Attractions</a>
+        </section>
 
 
     </header>

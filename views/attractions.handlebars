@@ -5,13 +5,13 @@
 {{#each events as |event|}}
 <div id="event-card">
 
-    <h3 id="event-title">{{{eventtitle}}}</h3>
+    <a href="/singleAttraction/{{id}}"><h3 id="event-title">{{title}}</h3></a>
 
-    <h4 id="event-date">{{{eventdate}}}</h4>
+    <h4 id="event-date">{{date}}</h4>
 
-    <p id="event-desc">{{{eventdescription}}}</p>
+    <p id="event-desc">{{description}}</p>
 
-<button type="submit" id="faveBtn"data-title="{{title}}" data-desc="{{description}}" data-price="{{price}}" data-date="{{date}}" data-address="{{address}}">Add to Favorites</button>
+<button type="submit" id="faveBtn" data-title="{{title}}" data-desc="{{description}}" data-price="{{price}}" data-date="{{date}}" data-address="{{address}}">Add to Favorites</button>
 
 </div>
 {{/each}}

@@ -1,5 +1,6 @@
 // Routing and rendering page
 const router = require("express").Router()
+const {Event, User} = require("../models")
 
 
 router.get("/", async (req,res) => {
@@ -7,25 +8,47 @@ router.get("/", async (req,res) => {
    
 })
 
-
 router.get("/login", async (req,res) => {
     res.render("login");
   
 })
 
+router.get("/attractions", async (req, res) => {
+    try {
+        const attractionData = await Event.findAll()
+        const events = attractionData.map((attraction) => attraction.get({plain:true}))
+        res.render("attractions", {
+            events,
+            logged_in: req.session.logged_in
+        })
+    } catch (error) {
+        res.status(500).json(error)
+    }
+})
 
 // Specific attraction example 
 
 router.get("/singleAttraction/:id", async (req, res) => {
     try {
+        const attractionData = await Event.findOne({where:{id:req.params.id}})
+        console.log(req.params.id)
+        const attraction = attractionData.get({plain:true})
+       
+
         res.render("singleAttraction", {
-            title: "SpookyZone", 
-            description: "It's Spooky!",
-            price: "$3,00000",
-            address: "nowhere",
-            date: "June 30"
+            ...attraction,
+            logged_in: req.session.logged_in
         })
+
+        // res.render("singleAttraction", {
+        //     title: "SpookyZone", 
+        //     description: "It's Spooky!",
+        //     price: "$3,00000",
+        //     address: "nowhere",
+        //     date: "June 30"
+        //})
     } catch (error) {
+        console.log("HELP")
         res.status(500).json(error)
     }
 })
