@@ -2,6 +2,8 @@ const router = require("express").Router()
 const User = require("../../models/usermodel")
 
 
+// Sign up date page - now stores information as object
+// Need to have object saved into MySql Data Tabel 
 
 router.post("/signup", async (req, res)=> {
     console.log("See Below for Account Information")
