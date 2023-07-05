@@ -2,7 +2,6 @@ const router = require("express").Router()
 const User = require("../../models/usermodel")
 
 
-
 router.post("/signup", async (req, res)=> {
     console.log("hi")
     try {
@@ -45,7 +44,7 @@ router.post("/login", async (req, res) => {
             res.status(400).json({ message: "Username or password incorrect." });
             return
         }
-        console.log(userData)
+        // console.log(userData)
         const goodPw = await userData.checkPassword(req.body.password)
         if (!goodPw) {
             res.status(400).json({ message: "Username or password incorrect." });

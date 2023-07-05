@@ -8,14 +8,17 @@
 <h2 class="whitefont">Your resource for spooky attractions in your area!</h2>
 
 <br><br>
-
-
+{{#if logged_in}}
+<button id="logout" class="title">Log Out</button>
+{{/if}}
+{{#unless logged_in}}
 <a href="/login"  class = "title"> Login</a>
 <br>
 <a href="/signup"  class = "title"> Sign Up</a>
-
+{{/unless}}
 <br><br>
   <section id="attractions">
             <a href="/attractions" class="title">Activities and Attractions</a>
         </section> 
  
+<script src="/js/logout.js"></script>
