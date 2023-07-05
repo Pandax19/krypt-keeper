@@ -1,5 +1,5 @@
 const loginFormHandler = async e => {
-    e.preventDefault()
+    e.preventDefault();
     const username = document.getElementById("username-login").value.trim()
     const password = document.getElementById("password-login").value.trim()
     if (username && password){
@@ -16,7 +16,7 @@ const loginFormHandler = async e => {
             alert(response.statusText)
         }
     }
-}
+};
 loginFormHandler()
 
 document.querySelector("#login-form").addEventListener("submit", loginFormHandler)
