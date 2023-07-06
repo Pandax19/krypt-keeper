@@ -1,14 +1,14 @@
 <h2 class="header">Saved Events</h2>
 
-{{#each savedEvents as |savedevent|}}
+{{#each faves as |fave|}}
 <div id="event-card">
 
 
-    <h3 id="event-title">{{{eventtitle}}}</h3>
+    <h3 id="event-title">{{dataValues.title}}</h3>
 
-    <h4 id="event-date">{{{eventdate}}}</h4>
+    <h4 id="event-date">{{dataValues.date}}</h4>
 
-    <p id="event-desc">{{{eventdescription}}}</p>
+    <p id="event-desc">{{dataValues.description}}</p>
 
 <button type="submit" id="faveBtn">Add to Favorites</button>
 

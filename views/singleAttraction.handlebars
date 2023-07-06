@@ -10,11 +10,11 @@
 
     <p id="event-desc">{{description}}</p>
     {{#if logged_in}}
-    <button id="faveBtn" data-title="{{title}}" data-desc="{{description}}" data-price="{{price}}" data-date="{{date}}" data-address="{{address}}">Add To Favorites</button>
+   <button class="fave" data-event_id={{id}} data-user_id={{thisUser}}>Add to Favorites</button>
     {{/if}}
 </div>
 
 <div id="map-area">
     {{!-- map data here --}}
 </div>
-<script src="/js/singleAttraction.js"></script>
+<script src="/js/attractions.js"></script>
