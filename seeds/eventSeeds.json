@@ -1,36 +1,42 @@
 [{
-    "title" : "Psycho Trail",
-    "address": "311 Harrison Avenue, Blackwood, NJ",
-    "price" : "0"
+    "title" : "Lehigh Valley Scream Park",
+    "address": "2951 Betz Court, Orefield, PA 18069",
+    "price" : "50",
+    "description": "Lehigh Valley Scream Park has many horrors just awaiting their next pray. Including Hollow of Horror Hayride, Condemned Haunted House, Operation Bio Purge, and Psycho Trail, this must-visit destination is for the die-hard-horror fans."
     
 },
 {
     "title" : "BloodShed Farms",
-    "address": "Columbus Farmers Market, Gate 1, Southern Entrance 2919 Route 206, Columbus, NJ",
-    "price" : "60"
+    "address": "2919 ROUTE 206,COLUMBUS NJ",
+    "price" : "60",
+    "description": "BloodShed Farms is an immersive, terrifying haunted drive thru experience. You have the option to have a contact-less or interactive experience during the showings of nightmarish displays and special effects. "
     
 },
 {
     "title" : "Fright Factory",
     "address": "2200 S. Swanson Street , Philadelphia, PA 19148 ",
-    "price" : "25"
+    "price" : "25",
+    "description": "Fright Factory is a high scare, high startle, adult themed haunted house featured on the Travel Channel as one of the scariest haunted attractions in America. This attraction will take 30 - 40 minutes to get through... if you get through at all."
 },
 {
     "title" : "Halloween Nights at Eastern State Penitentiary",
     "address": "2027 Fairmount Ave, Philadelphia, PA 19130 ",
-    "price" : "30" 
+    "price" : "30",
+    "description": "With many different attractions rolled into one, the Eastern State Penitentiary has everything a horror-lover could dream of. The various haunted house tours, themed lounges, and performances are absolutely breath-taking."
     
 },
 {
     "title" : "Pennhurst Asylum",
     "address": "250 Commonwealth Dr, Spring City, PA 19475 ",
-    "price" : "52"
+    "price" : "75",
+    "description": "If you want to be pushed to your limits, add Pennhurst Asylum to your bucket list. With horror campouts, paranormal tours, The morgue, and Tunnels, this destination will make or break your resolve. "
     
 },
 {
     "title" : "Bates Motel",
     "address": "1835 Middletown Rd, Glen Mills, PA 19342 ",
-    "price" : "40"
+    "price" : "40",
+    "description": "Bates Motel has an incredible display of terror and mayhem with their haunted hayride, Revenge of the Scarecrows haunted trail, and escape rooms. If you're looking for scary then look no further. "
     
 }
 ]

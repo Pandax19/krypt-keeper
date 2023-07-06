@@ -1,1 +1,16 @@
 #map { height: 180px; };
+
+
+body {
+    background-color: purple;
+}
+
+.container {
+    border:solid blue line;
+    background-color: blue;
+
+}
+#attractions {
+    border: solid black 12px;
+
+}
