@@ -1,12 +1,14 @@
+
 <section class="whitefont">
 
     
 <h2 class="header">Attractions Near You</h2>
 <br>
 <input style="color:black;" type="text" placeholder="Search by Zipcode" />
+
 <button type="submit">Search</button>
 
-{{!-- {{#each events as |event|}}
+{{#each events as |event|}}
 <div id="event-card">
 
     <a href="/singleAttraction/{{id}}"><h3 id="event-title">{{title}}</h3></a>
@@ -15,10 +17,10 @@
 
     <p id="event-desc">{{description}}</p>
 
-<button type="submit" id="faveBtn" data-title="{{title}}" data-desc="{{description}}" data-price="{{price}}" data-date="{{date}}" data-address="{{address}}">Add to Favorites</button>
+<button class="fave" data-event_id={{id}} data-user_id={{thisUser}}>Add to Favorites</button>
 
 </div>
-{{/each}} --}} 
-
-
+{{/each}} 
 </section>
+
+<script src="/js/attractions.js"></script>

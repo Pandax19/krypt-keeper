@@ -2,8 +2,6 @@ const router = require("express").Router()
 const User = require("../../models/usermodel")
 
 
-// Sign up date page - now stores information as object
-// Need to have object saved into MySql Data Tabel 
 
 router.post("/signup", async (req, res)=> {
     console.log("See Below for Account Information")
@@ -50,7 +48,7 @@ router.post("/login", async (req, res) => {
             res.status(400).json({ message: "Username or password incorrect." });
             return
         }
-        console.log(userData)
+        // console.log(userData)
         const goodPw = await userData.checkPassword(req.body.password)
         if (!goodPw) {
             res.status(400).json({ message: "Username or password incorrect." });
@@ -58,12 +56,27 @@ router.post("/login", async (req, res) => {
         }
         console.log("howdy")
         req.session.save(() => {
-            req.session.user_id = userData.user_id
+            req.session.user_id = userData.dataValues.user_id
             req.session.logged_in = true
             res.json({ user: userData, message: "Successfully logged in!" })
         });
     } catch (error) {
         res.status(400).json(error)
+    }
+})
+
+router.get("/faves", async (req, res) => {
+    try {
+        const user = await User.findByPk(req.session.user_id)
+        const faveIds = JSON.parse(JSON.parse(user.dataValues.favorited_events))
+        const favePromises = faveIds.map(async function(id){
+            return await Event.findByPk(id)
+        })
+        const faves = await Promise.all(favePromises)
+        res.render("favorites", {faves})
+    } catch (error) {
+        console.log(error)
+        res.render("login")
     }
 })
 
