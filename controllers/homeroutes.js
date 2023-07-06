@@ -3,30 +3,27 @@ const router = require("express").Router()
 const {Event, User} = require("../models")
 
 
+//main route, or homepage. 
+
 router.get("/", async (req,res) => {
-    console.log("home route")
-    res.render("home", {logged_in: req.session.logged_in});
-//    res.send("The goose is watching")
+    console.log('Testing Home Page');
+    res.render("home")})
+
+//login/signup routes
+
+router.get("/login", (req, res) => {
+    res.render("login")    
 })
 
-
-router.get("/login", (req,res) => {
-    res.render("login.handlebars");
-   // res.send("The goose is watching")
+router.get("/signup", (req, res) => {
+    res.render("signup")
 })
 
 router.get("/attractions", async (req, res) => {
-    try {
-        const attractionData = await Event.findAll()
-        const events = attractionData.map((attraction) => attraction.get({plain:true}))
-        res.render("attractions", {
-            events,
-            logged_in: req.session.logged_in
-        })
-    } catch (error) {
-        res.status(500).json(error)
-    }
-})
+    res.render("attractions")})
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 // Specific attraction example 
 
 router.get("/singleAttraction/:id", async (req, res) => {
@@ -34,11 +31,12 @@ router.get("/singleAttraction/:id", async (req, res) => {
         const attractionData = await Event.findOne({where:{id:req.params.id}})
         console.log(req.params.id)
         const attraction = attractionData.get({plain:true})
-       
+        let logged_in = req.session.logged_in ? req.session.logged_in : false
 
         res.render("singleAttraction", {
+
             ...attraction,
-            logged_in: req.session.logged_in
+            logged_in: logged_in
         })
 
         // res.render("singleAttraction", {
@@ -56,23 +54,8 @@ router.get("/singleAttraction/:id", async (req, res) => {
 
 //login/signup routes
 
-router.get("/login", (req, res) => {
-    if (req.session.logged_in) {
-        res.redirect("/home")
-        return
-    }
-    res.render("login")    
-})
 
-router.get("/signUp", (req, res) => {
-    if (req.session.logged_in) {
-        res.redirect("/home")
-        return
-    }
-    res.render("signUp")
-})
-
-// path to models folder   
+// Path to models folder   
 
 
 module.exports = router;

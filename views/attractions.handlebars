@@ -1,10 +1,12 @@
-<div class="container">
-    <link rel="stylesheet" type="text/css" href="../public/css/style.css">
-    <h2 class="header">Attractions Near You</h2>
-<input type="text" placeholder="Search by Zipcode" />
+<section class="whitefont">
+
+    
+<h2 class="header">Attractions Near You</h2>
+<br>
+<input style="color:black;" type="text" placeholder="Search by Zipcode" />
 <button type="submit">Search</button>
 
-{{#each events as |event|}}
+{{!-- {{#each events as |event|}}
 <div id="event-card">
 
     <a href="/singleAttraction/{{id}}"><h3 id="event-title">{{title}}</h3></a>

@@ -1,9 +1,7 @@
 const router = require("express").Router()
 const User = require("../../models/usermodel")
 
-router.get("/", async (req, res) => {
-    res.send("The goose needs a login")
-})
+
 
 router.post("/signup", async (req, res)=> {
     console.log("hi")
@@ -36,8 +34,8 @@ router.post("/logout", (req, res) => {
 //login
 
 router.post("/login", async (req, res) => {
+    console.log("AHHHHHHHHH")
     try {
-        console.log("AHHHHHHHHH")
         const userData = await User.findOne({
             where: {
                 username: req.body.username

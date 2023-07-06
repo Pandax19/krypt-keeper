@@ -5,7 +5,7 @@
     min-width: 100%;
     min-height: 100%;
     object-fit: cover;
-    z-index: -1;
+    
 }
 
 #attractions {
@@ -25,11 +25,11 @@
 
 }
 
-.test {
+.whitefont {
     
     font-size: xx-large;
     background: none;
-    color: blue;
+    color: black;
     font-weight: 700;
     mix-blend-mode: overlay;
     padding: 5px 5px;
@@ -41,7 +41,7 @@
     
     font-size: xx-large;
     background: none;
-    color: blue;
+    color: white;
     font-weight: 700;
     mix-blend-mode: overlay;
     padding: 5px 5px;
@@ -53,7 +53,7 @@
     align-items: center;
     font-size: xx-large;
     background: none;
-    color: blue;
+    color: white;
     font-weight: 700;
     mix-blend-mode: overlay;
     
