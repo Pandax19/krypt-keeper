@@ -17,6 +17,8 @@ router.get('/' , async(req, res ) => {
         //     ]
         // }
         )
+
+        
         const events = eventsDB.map((event1) => 
         event1.get({ plain: true }));
         res.render("attractions", {

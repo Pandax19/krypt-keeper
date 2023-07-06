@@ -1,15 +1,18 @@
 const router = require("express").Router()
 const User = require("../../models/usermodel")
 
-router.get("/", async (req, res) => {
-    res.send("The goose needs a login")
-})
+
+// Sign up date page - now stores information as object
+// Need to have object saved into MySql Data Tabel 
 
 router.post("/signup", async (req, res)=> {
-    console.log("hi")
+    console.log("See Below for Account Information")
+    console.log(req.body)
+    console.log(req.session)
+
     try {
         const userData = await User.create(req.body);
-        console.log(req.body)
+       
         req.session.save(()=>{
             req.session.user_id = userData.id;
             req.session.logged_in = true;
@@ -36,8 +39,8 @@ router.post("/logout", (req, res) => {
 //login
 
 router.post("/login", async (req, res) => {
+    console.log("AHHHHHHHHH")
     try {
-        console.log("AHHHHHHHHH")
         const userData = await User.findOne({
             where: {
                 username: req.body.username
