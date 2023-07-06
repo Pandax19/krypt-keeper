@@ -2,8 +2,6 @@ const router = require("express").Router()
 const User = require("../../models/usermodel")
 
 
-// Sign up date page - now stores information as object
-// Need to have object saved into MySql Data Tabel 
 
 router.post("/signup", async (req, res)=> {
     console.log("See Below for Account Information")
@@ -50,7 +48,7 @@ router.post("/login", async (req, res) => {
             res.status(400).json({ message: "Username or password incorrect." });
             return
         }
-        console.log(userData)
+        // console.log(userData)
         const goodPw = await userData.checkPassword(req.body.password)
         if (!goodPw) {
             res.status(400).json({ message: "Username or password incorrect." });

@@ -7,7 +7,9 @@ const {Event, User} = require("../models")
 
 router.get("/", async (req,res) => {
     console.log('Testing Home Page');
-    res.render("home")})
+    res.render("home", {
+        logged_in: req.session.logged_in
+    })})
 
 //login/signup routes
 
