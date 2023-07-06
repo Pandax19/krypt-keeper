@@ -48,7 +48,6 @@ router.post("/login", async (req, res) => {
             res.status(400).json({ message: "Username or password incorrect." });
             return
         }
-        // console.log(userData)
         const goodPw = await userData.checkPassword(req.body.password)
         if (!goodPw) {
             res.status(400).json({ message: "Username or password incorrect." });
