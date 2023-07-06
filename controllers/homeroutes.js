@@ -37,8 +37,9 @@ router.get("/singleAttraction/:id", async (req, res) => {
 
         res.render("singleAttraction", {
 
-            ...attraction,
-            logged_in: logged_in
+            ...attraction.dataValues,
+            logged_in: req.session.logged_in,
+            user_id: req.session.user_id
         })
 
         // res.render("singleAttraction", {
