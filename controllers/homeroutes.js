@@ -32,6 +32,7 @@ router.get("/singleAttraction/:id", async (req, res) => {
     try {
         const attractionData = await Event.findOne({where:{id:req.params.id}})
         console.log(req.params.id)
+        console.log(attractionData)
         const attraction = attractionData.get({plain:true})
         let logged_in = req.session.logged_in ? req.session.logged_in : false
         console.log(attraction)
