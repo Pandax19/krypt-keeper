@@ -27,8 +27,17 @@ Event.init(
       type: DataTypes.INTEGER,
     },
     address: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
+      
     },
+
+    street: {
+      type: DataTypes.STRING,
+    },
+    city: {
+      type: DataTypes.STRING,
+    },
+
     zip: {
       type: DataTypes.STRING
     },
@@ -38,6 +47,7 @@ Event.init(
     longitude: {
       type: DataTypes.STRING
     },
+
     user_id: {
       type: DataTypes.INTEGER,
       references: {
