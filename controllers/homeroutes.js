@@ -34,11 +34,11 @@ router.get("/singleAttraction/:id", async (req, res) => {
         console.log(req.params.id)
         const attraction = attractionData.get({plain:true})
         let logged_in = req.session.logged_in ? req.session.logged_in : false
-
+        console.log(attraction)
         res.render("singleAttraction", {
 
-            ...attraction.dataValues,
-            logged_in: req.session.logged_in,
+            ...attraction,
+            logged_in: logged_in,
             user_id: req.session.user_id
         })
 
