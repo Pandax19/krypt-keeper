@@ -2,41 +2,59 @@
     "title" : "Lehigh Valley Scream Park",
     "address": "2951 Betz Court, Orefield, PA 18069",
     "price" : "50",
-    "description": "Lehigh Valley Scream Park has many horrors just awaiting their next pray. Including Hollow of Horror Hayride, Condemned Haunted House, Operation Bio Purge, and Psycho Trail, this must-visit destination is for the die-hard-horror fans."
+    "description": "Lehigh Valley Scream Park has many horrors just awaiting their next victims. Including Hollow of Horror Hayride, Condemned Haunted House, Operation Bio Purge, and Psycho Trail, this must-visit destination is for the die-hard-horror fans.",
+    "zip": "18069",
+    "latitude": "40.6323",
+    "longitude": "75.6150"
     
 },
 {
     "title" : "BloodShed Farms",
     "address": "2919 ROUTE 206,COLUMBUS NJ",
     "price" : "60",
-    "description": "BloodShed Farms is an immersive, terrifying haunted drive thru experience. You have the option to have a contact-less or interactive experience during the showings of nightmarish displays and special effects. "
+    "description": "BloodShed Farms is an immersive, terrifying haunted drive thru experience. You have the option to have a contact-less or interactive experience during the showings of nightmarish displays and special effects. ",
+    "zip": "08022",
+    "latitude": "40.06516",
+    "longitude": "-74.70905"
     
 },
 {
     "title" : "Fright Factory",
     "address": "2200 S. Swanson Street , Philadelphia, PA 19148 ",
     "price" : "25",
-    "description": "Fright Factory is a high scare, high startle, adult themed haunted house featured on the Travel Channel as one of the scariest haunted attractions in America. This attraction will take 30 - 40 minutes to get through... if you get through at all."
+    "description": "Fright Factory is a high scare, high startle, adult themed haunted house featured on the Travel Channel as one of the scariest haunted attractions in America. This attraction will take 30 - 40 minutes to get through... if you get through at all.",
+    "zip": "19148",
+    "latitude": "39.91162",
+    "longitude": "-75.15143"
 },
 {
     "title" : "Halloween Nights at Eastern State Penitentiary",
     "address": "2027 Fairmount Ave, Philadelphia, PA 19130 ",
     "price" : "30",
-    "description": "With many different attractions rolled into one, the Eastern State Penitentiary has everything a horror-lover could dream of. The various haunted house tours, themed lounges, and performances are absolutely breath-taking."
+    "description": "With many different attractions rolled into one, the Eastern State Penitentiary has everything a horror-lover could dream of. The various haunted house tours, themed lounges, and performances are absolutely breath-taking.",
+    "zip": "19130",
+    "latitude": "39.9683",
+    "longitude": "75.1750"
     
 },
 {
     "title" : "Pennhurst Asylum",
     "address": "250 Commonwealth Dr, Spring City, PA 19475 ",
     "price" : "75",
-    "description": "If you want to be pushed to your limits, add Pennhurst Asylum to your bucket list. With horror campouts, paranormal tours, The morgue, and Tunnels, this destination will make or break your resolve. "
+    "description": "If you want to be pushed to your limits, add Pennhurst Asylum to your bucket list. With horror campouts, paranormal tours, The morgue, and Tunnels, this destination will make or break your resolve. ",
+    "zip": "19475",
+    "latitude": "40.170936",
+    "longitude": "-75.606215"
     
 },
 {
     "title" : "Bates Motel",
     "address": "1835 Middletown Rd, Glen Mills, PA 19342 ",
     "price" : "40",
-    "description": "Bates Motel has an incredible display of terror and mayhem with their haunted hayride, Revenge of the Scarecrows haunted trail, and escape rooms. If you're looking for scary then look no further. "
+    "description": "Bates Motel has an incredible display of terror and mayhem with their haunted hayride, Revenge of the Scarecrows haunted trail, and escape rooms. If you're looking for scary then look no further. ",
+    "zip": "19342",
+    "latitude": "39.9111",
+    "longitude": "75.4927"
     
 }
 ]
