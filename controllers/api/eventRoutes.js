@@ -38,7 +38,8 @@ router.get("/:zipCode", async (req,res) => {
     try {
         
     
-    const eventData = await Event.findAll({ WHERE: {
+    const eventData = await Event.findAll({ 
+        where: {
         zip: req.params.zipCode
         
     }})

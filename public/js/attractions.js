@@ -34,18 +34,23 @@ async function searchMe (event){
         })
         const eventData = await response.json()
         console.log(eventData)
-        var myCards = document.querySelector
+        var myCards = document.querySelector("#myCards")
+        myCards.innerHTML = ""
         eventData.forEach(singleEvent => {
-            myCards.innerHTML = `<div id="event-card">
+            if(singleEvent.zip == searchZip) {
+
+            
+            myCards.innerHTML += `<div id="event-card">
 
             <a href="/singleAttraction/${singleEvent.id}"><h3 id="event-title">${singleEvent.title}</h3></a>
         
-            <h4 id="event-date">${singleEvent.date}</h4>
+            
         
             <p id="event-desc">${singleEvent.description}</p>
         
         <button class="fave" data-event_id=${singleEvent.id} data-user_id=${singleEvent.user_id}>Add to Favorites</button>
         </div>`
+            }
         })
         // console.log()
     } catch (error) {
