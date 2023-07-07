@@ -8,6 +8,7 @@ const successCallback = (position) => {
         // displayMap()
         console.log(myLatitude)
         map.setView(new L.LatLng(myLatitude, myLongitude), 8 );
+        console.log(myLatitude, myLongitude)
 };
 const errorCallback = (error) => {
         console.log(error);
