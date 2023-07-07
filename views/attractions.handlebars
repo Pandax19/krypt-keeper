@@ -3,9 +3,9 @@
     
 <h2 class="header">Attractions Near You</h2>
 <br>
-<input style="color:black;" type="text" placeholder="Search by Zipcode" />
-<button type="submit">Search</button>
-
+<input id="searchZip" style="color:black;" type="text" placeholder="Search by Zipcode" />
+<button id="searchButton" type="submit">Search</button>
+<div id ="myCards">
 {{#each events as |event|}}
 <div id="event-card">
 
@@ -19,6 +19,7 @@
 
 </div>
 {{/each}} 
+</div>
 </section>
 
 <script src="/js/attractions.js"></script>

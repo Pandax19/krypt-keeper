@@ -33,8 +33,19 @@ router.get('/' , async(req, res ) => {
 
 
 
-router.get("/", async (req,res) => {
-    res.send("The events")
+router.get("/:zipCode", async (req,res) => {
+    // res.send(req.params.zipCode)
+    try {
+        
+    
+    const eventData = await Event.findAll({ WHERE: {
+        zip: req.params.zipCode
+        
+    }})
+    res.json(eventData)
+    } catch (error) {
+        
+    }
 })
 
 

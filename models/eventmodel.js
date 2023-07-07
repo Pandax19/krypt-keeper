@@ -37,11 +37,15 @@ Event.init(
     city: {
       type: DataTypes.STRING,
     },
-    state: {
-      type: DataTypes.STRING,
-    },
+
     zip: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING
+    },
+    latitude: {
+      type: DataTypes.STRING
+    },
+    longitude: {
+      type: DataTypes.STRING
     },
 
     user_id: {
