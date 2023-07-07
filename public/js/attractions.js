@@ -9,7 +9,7 @@ async function addToFaves() {
             }),
             headers: { "Content-Type": "application/json" }
         })
-        document.location.replace("/api/users/myfaves")
+        document.location.replace("/myfaves")
     } catch (error) {
         console.log(error)
         document.location.replace("/login")

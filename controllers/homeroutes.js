@@ -1,6 +1,38 @@
 // Routing and rendering page
 const router = require("express").Router()
-const {Event, User} = require("../models")
+const {Event, User, Favs} = require("../models")
+const withAuth = require("../utils/auth")
+
+
+
+router.get("/myfaves", withAuth, async (req, res) => {
+    console.log(req.session)
+    try {
+        const user = await User.findByPk(req.session.user_id, {
+
+            include: [{model: Event, through: Favs}]
+        })
+        console.log(user)
+        const userInfo = user.get({plain: true })
+        const faves = userInfo.events
+        console.log(faves)
+
+        
+        // const faveIds = JSON.parse(user.dataValues.favorited_events)
+        // console.log(faveIds)
+        // const favePromises = faveIds.map(async function (id) {
+        //     console.log(id)
+        //     return await Event.findByPk(id)
+        // })
+        // const faves = await Promise.all(favePromises)
+        // console.log('Favs array')
+        // console.log(faves)
+        res.render("favorites", { faves })
+    } catch (error) {
+        console.log(error)
+        res.status(500).json(error)
+    }
+})
 
 
 //main route, or homepage. 
