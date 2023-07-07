@@ -20,7 +20,8 @@
   },
   "scripts": {
     "start": "node server.js",
-    "devStart": "nodemon server.js"
+    "devStart": "nodemon server.js",
+    "seed": "node seeds/seeds"
   },
   "keywords": [],
   "author": "Group 5: Upenn BootCamp",
