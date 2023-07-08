@@ -37,7 +37,6 @@ Event.init(
     city: {
       type: DataTypes.STRING,
     },
-
     zip: {
       type: DataTypes.STRING
     },
@@ -48,15 +47,9 @@ Event.init(
       type: DataTypes.STRING
     },
 
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "user", 
-        key: "id"
-      }
-    }
 
   },
+  
   {
     sequelize,
     timestamps: false,

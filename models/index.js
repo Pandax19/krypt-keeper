@@ -1,12 +1,15 @@
 const Event = require("./eventmodel");
 const User = require ("./usermodel");
+const Favs = require("./favesmodel");
 
-Event.belongsTo(User, {
-    foreignKey: "user_id"
+Event.belongsToMany(User, {
+    foreignKey: "event_id" , 
+    through: Favs
 });
 
-User.hasMany(Event, {
-    foreignKey: "user_id"
+User.belongsToMany(Event, {
+    foreignKey: "user_id",
+    through: Favs
 })
 
-module.exports = {Event, User}
+module.exports = {Event, User, Favs}

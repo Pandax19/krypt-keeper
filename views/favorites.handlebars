@@ -1,17 +1,19 @@
-<h2 class="header">Saved Events</h2>
-
+<h2 class="whitefont">Saved Events</h2>
+<section class="whitefont">
 {{#each faves as |fave|}}
 <div id="event-card">
 
 
-    <h3 id="event-title">{{dataValues.title}}</h3>
+    <h3 id="event-title">{{fave.title}}</h3>
 
-    <h4 id="event-date">{{dataValues.date}}</h4>
+    <h4 id="event-date">{{fave.description}}</h4>
 
-    <p id="event-desc">{{dataValues.description}}</p>
+    <p id="event-desc">{{fave.address}}</p>
 
-<button type="submit" id="faveBtn">Add to Favorites</button>
+    <p id="event-price">Price: ${{fave.price}}</p>
+
+
 
 </div>
 {{/each}}
-
+</section>
