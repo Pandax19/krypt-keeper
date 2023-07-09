@@ -2,6 +2,14 @@
 font-family: 'Grenze Gotisch', cursive;
 }
 
+.container-lg {
+    border: solid black 12px;
+}
+
+#event-card{
+    background-color: black;
+}
+
 #myVideo {
     position: fixed;
     right: 0;
