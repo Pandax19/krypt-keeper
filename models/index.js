@@ -3,13 +3,15 @@ const User = require ("./usermodel");
 const Favs = require("./favesmodel");
 
 Event.belongsToMany(User, {
-    foreignKey: "event_id" , 
-    through: Favs
+     
+    through: Favs,
+    foreignKey: "event_id"
 });
 
 User.belongsToMany(Event, {
-    foreignKey: "user_id",
-    through: Favs
+    through: Favs,
+    foreignKey: "user_id"
+    
 })
 
 module.exports = {Event, User, Favs}
