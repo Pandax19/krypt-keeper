@@ -3,11 +3,11 @@ font-family: 'Grenze Gotisch', cursive;
 }
 
 .container-lg {
-    border: solid black 12px;
+    border: solid black 8px;
 }
 
 #event-card{
-    background-color: black;
+    border: solid rgb(64, 15, 64) 8px;
 }
 
 #myVideo {
