@@ -10,7 +10,8 @@ Event.belongsToMany(User, {
 
 User.belongsToMany(Event, {
     through: Favs,
-    foreignKey: "user_id"
+    foreignKey: "user_id",
+    constraints: false
     
 })
 
