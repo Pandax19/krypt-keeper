@@ -1,3 +1,7 @@
+*{
+font-family: 'Grenze Gotisch', cursive;
+}
+
 #myVideo {
     position: fixed;
     right: 0;
