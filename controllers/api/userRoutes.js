@@ -1,17 +1,18 @@
 const router = require("express").Router()
-const User = require("../../models/usermodel")
+const {User, Event, Favs} = require("../../models")
 
 
 
-router.post("/signup", async (req, res)=> {
+
+router.post("/signup", async (req, res) => {
     console.log("See Below for Account Information")
     console.log(req.body)
     console.log(req.session)
 
     try {
         const userData = await User.create(req.body);
-       
-        req.session.save(()=>{
+
+        req.session.save(() => {
             req.session.user_id = userData.id;
             req.session.logged_in = true;
             console.log(userData)
@@ -54,29 +55,56 @@ router.post("/login", async (req, res) => {
             return
         }
         console.log("howdy")
-        req.session.save(() => {
-            req.session.user_id = userData.dataValues.user_id
+        console.log(userData)
+        // req.session.save(() => {
+            req.session.user_id = userData.dataValues.id
             req.session.logged_in = true
             res.json({ user: userData, message: "Successfully logged in!" })
-        });
+        // });
     } catch (error) {
         res.status(400).json(error)
     }
 })
 
-router.get("/faves", async (req, res) => {
+
+
+
+router.post("/myfaves", async (req, res) => {
+    console.log("post faves!")
     try {
-        const user = await User.findByPk(req.session.user_id)
-        const faveIds = JSON.parse(JSON.parse(user.dataValues.favorited_events))
-        const favePromises = faveIds.map(async function(id){
-            return await Event.findByPk(id)
+        console.log(req.body)
+        const favData = await Favs.create({
+
+            user_id: req.session.user_id,
+            event_id: req.body.eventId
         })
-        const faves = await Promise.all(favePromises)
-        res.render("favorites", {faves})
+        console.log(favData)
+        res.status(200).json(favData)
+
+        // User.findByPk(req.body.userId)
+        //     .then(user => {
+        //         console.log(user)
+        //         if (user) {
+        //             const favoritedEvents = JSON.parse(user.favorited_events)
+        //             console.log(favoritedEvents)
+        //             if (!favoritedEvents.includes(req.body.eventId)) {
+        //                 favoritedEvents.push(req.body.eventId)
+        //             }
+        //             user.favorited_events = JSON.stringify(favoritedEvents)
+        //             return user.save({fields:["favorited_events"]})
+        //         } else {
+        //             throw new error ("user not found")
+        //         }
+        //     })
+        //     .then(updatedUser => {
+        //         console.log(updatedUser)
+        //         res.sendStatus(200)
+         //   })
     } catch (error) {
         console.log(error)
-        res.render("login")
     }
 })
+
+
 
 module.exports = router;

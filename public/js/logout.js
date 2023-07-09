@@ -6,6 +6,7 @@ async function logout(){
             method: "POST"
         })
         if (response.ok) {
+            console.log("log out!!")
             document.location.replace("/")
         }
     } catch (error) {
@@ -15,4 +16,3 @@ async function logout(){
 }
 
 
-console.log("log out!!")
