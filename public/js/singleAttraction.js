@@ -7,17 +7,22 @@ async function addToFaves(e) {
     const date = e.target.dataset.date
     const address = e.target.dataset.address
     try {
-        const response = await fetch("/api/events/", {
+        const response = await fetch("/api/users/myfaves", {
             method: "POST",
-            body: JSON.stringify({title, description, price, date, address}),
+            body: JSON.stringify( {
+                 eventId: e.target.dataset.event_id,
+                 userId: e.target.dataset.user_id
+                }),
             headers: {
                 "Content-Type": "application/json"
             }
 
         })
-        console.log(response)
-        const data = await response.json()
-        console.log(data)
+        document.location.replace("/myfaves")
+
+        // console.log(response)
+        // const data = await response.json()
+        // console.log(data)
         //redirect user to faves
     } catch (error) {
         console.log(error)

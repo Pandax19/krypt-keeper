@@ -34,9 +34,9 @@ async function searchMe(event) {
 
         })
         const eventData = await response.json()
-        console.log("START")
-        console.log(eventData)
-        console.log("END")
+        // console.log("START")
+        console.log(eventData.length)
+        // console.log("END")
         var myCards = document.querySelector("#myCards")
         myCards.innerHTML = ""
         eventData.forEach(singleEvent => {
@@ -55,6 +55,9 @@ async function searchMe(event) {
         </div>`
             }
         })
+        if(eventData.length == 0){
+            myCards.innerHTML = `<p>No results Found</p>`
+        }
         // console.log()
     } catch (error) {
 
@@ -62,6 +65,12 @@ async function searchMe(event) {
         // document.location.replace("/login")
     }
 }
+try {
 document.getElementById("searchButton").addEventListener("click", searchMe)
+    
+} catch (error) {
+    
+}
+
 
 Array.from(document.querySelectorAll(".fave")).forEach(el => el.addEventListener("click", addToFaves))
