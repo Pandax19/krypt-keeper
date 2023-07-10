@@ -19,6 +19,7 @@ Krypt Keeper
 * [Contribute](#contribute)
 * [Tested](#tested)
 * [Questions](#questions)
+* [Credits](#Credits)
 
 
 ![screenshot](./public/Assests/kk-faves.JPG)
@@ -33,7 +34,7 @@ Krypt Keeper
     
 ### Description
     
-The goal of this project was to create a website that a user could type in a zip code to find haunted attractions for Autumn activities. it displays a map and information about the attraction , a user can sign up or log in and add certain events to their favorites page, which they can later visit for reference. This project uses Sequelize, mysql databases, api routes and local storage to save data. 
+The goal of this project was to create a website that a user could type in a zip code to find haunted attractions for Autumn activities. it displays a map and information about the attraction , a user can sign up or log in and add certain events to their favorites page, which they can later visit for reference. This project uses Sequelize, mysql databases, api routes to save data. 
     
 ### Link
 
@@ -58,6 +59,9 @@ manually through milestones
 ### Questions
 
 If you have any questions about the repo, open an issue or contact me directly at ajwhitley@comcast.net. You can find more of my work at [Pandax19](https://github.com/Pandax19/).
+
+### Credits
+Claire Blickenderfer, Paul Nixon
 
 
 ### Section 
